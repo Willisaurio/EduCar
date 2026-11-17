@@ -13,6 +13,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Check if user is logged in
+        if (!AppPreferences.isLogged(this)) {
+            // TODO: Launch login screen when ready
+            // Intent intent = new Intent(this, LoginActivity.class);
+            // startActivity(intent);
+            // finish();
+            // return;
+        }
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
