@@ -1,5 +1,6 @@
 package com.aiproj.educar;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -17,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is logged in
         if (!AppPreferences.isLogged(this)) {
             // TODO: Launch login screen when ready
-            // Intent intent = new Intent(this, LoginActivity.class);
-            // startActivity(intent);
-            // finish();
-            // return;
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+            return;
         }
 
         EdgeToEdge.enable(this);
